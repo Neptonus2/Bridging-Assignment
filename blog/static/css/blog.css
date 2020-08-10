@@ -1,37 +1,76 @@
 .page-header {
-    background-color: #ff9400;
+    background-image: url("../img/myblogslogo.png");
+    background-size: 140px;
+    background-position: 300 0;
+    background-repeat: no-repeat;
+    background-color: #547eaf;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    border-bottom: 10px ridge #547eaf;
     }
+
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #0c0e73;
     font-size: 36pt;
-    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgba(12,14,115,0.25);
     }
+
 .content {
-    margin-left: 40px;
+    background: #7B91A4;
+    background: -moz-linear-gradient(left, #708494 0%, #d2e2ec 50%, #7B91A4 100%);
+    background: -webkit-linear-gradient(left, #708494 0%, #d2e2ec 50%, #7B91A4 100%);
+    background: linear-gradient(to right, #708494 0%, #d2e2ec 50%, #7B91A4 100%);
+    border: 10px outset #7B91A4;;
     }
+
+/* The trebuchet is the superior medieval siege engine,
+ capable of throwing projectiles of up to 90kg
+ over a 300m distance*/
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     }
+
 .date {
-    color: #828282;
+    background-color:  #d9f9ff;
+    color: #4a5153;
+    border: 4px double #2084C4;
     }
-.save {
+
+/* Anything that is a default button*/
+.btn {
     float: right;
+    background: #adbecc;
+    border: 2px inset #708494;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     }
+
 .post-form textarea, .post-form input {
     width: 100%;
     }
+
+/* The top menu, except for the blog's title*/
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #83f7ff;
     float: right;
-    font-size: 26pt;
+    font-size: 32pt;
     margin-right: 20px;
+    margin-top: 10px;
     }
+
+
+/* I still have no idea how to center the posts to the content container portion,
+so I will just leave this manual setting to do its magic*/
 .post {
-    margin-bottom: 70px;
+    margin: 20 0 50 180;
+    width: 100%;
+    border: 6px double #115681;
+    background-color: #ffffff ;    
     }
+
 .post h1 a, .post h1 a:visited {
     color: #000000;
     }

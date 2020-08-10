@@ -6,14 +6,16 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="{% static 'img/myblogslogo.png' %}">
     </head>
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="{% url 'post_new' %}" class="top-menu">Create new post <span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
 
             <h1><a href="/">Robert's Blog</a></h1>
+            <!--img src="\static\img\myblogslogo.png"-->
         </div>
         <div class="content container">
             <div class="row">
