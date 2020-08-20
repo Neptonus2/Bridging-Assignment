@@ -133,3 +133,4 @@ dmypy.json
 # Others
 /static
 .DS_Store
+geckodriver.*

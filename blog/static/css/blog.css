@@ -9,6 +9,7 @@
     border-bottom: 10px ridge #547eaf;
     }
 
+/* The blog's title*/
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #0c0e73;
     font-size: 36pt;
@@ -16,6 +17,7 @@
     text-shadow: 3px 3px 3px rgba(12,14,115,0.25);
     }
 
+/* The nice grey gradient background that you see behind every post and during post writing*/
 .content {
     background: #7B91A4;
     background: -moz-linear-gradient(left, #708494 0%, #d2e2ec 50%, #7B91A4 100%);
