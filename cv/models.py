@@ -1,5 +1,8 @@
 from django.db import models
 
-class CV(models.Model):
+class Traits(models.Model):
+    title = models.CharField(max_length=200)
+    text = models.TextField()
 
-    name = models.CharField(max_length= 42)
+    def __str__(self):
+        return self.title

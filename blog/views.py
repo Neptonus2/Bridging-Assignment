@@ -40,5 +40,6 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+
 def cv_view(request):
     return render(request, '../../cv/templates/cv/cv.html', {})
