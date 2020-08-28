@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
     font-weight: bold;
     }
 
-.post-form textarea, .post-form input {
+.post-form textarea, .post-form input, .trait-form textarea, .trait-form input {
     width: 100%;
     }
 
@@ -76,3 +76,12 @@ so I will just leave this manual setting to do its magic*/
 .post h1 a, .post h1 a:visited {
     color: #000000;
     }
+
+.trait {
+    /*
+    border-top: 4px solid #235d81;
+    border-left: 12px outset #235d81 ;
+    */
+    border-right: 3px solid #235d81;
+    border-bottom: 6px solid #235d81;
+}

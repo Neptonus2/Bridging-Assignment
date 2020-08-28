@@ -1,11 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>New post</h1>
-    <form method="POST" class="post-form">
+    <h1>Edit CV field</h1>
+
+    <form method="POST" class="trait-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
-    <h4>Remember, what you put on the Internet, stays on the Internet...forever! ---></h4>
 {% endblock %}
