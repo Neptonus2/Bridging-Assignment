@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 
     {% block content %}
-        <h1 style="border-bottom: 12px double #0a3652; text-align: center;">
+        <h1 style="border-bottom: 12px double #0a3652; text-align: center; width: 150%" name="page-title">
             Curriculum Vitae
             {% if user.is_authenticated %}
                 <a  style="text-align:left" class="btn btn-default" href="{% url 'cv_new' %}">New trait <span class="glyphicon glyphicon-plus"></span></a>
@@ -13,11 +13,11 @@
                 {% if user.is_authenticated %}
                     <a class="btn btn-default" href="{% url 'cv_edit' pk=trait.pk %}">Edit <span class="glyphicon glyphicon-pencil"></span></a>
                 {% endif %}
-                {% if trait.title == "Name" or trait.title == "Address" or trait.title == "Phone number"%}
+                {% if trait.title == "Name" or trait.title == "Address" or trait.title == "Phone Number"%}
                     <h3>{{trait.title}}: {{trait.text }}</h3>
                 {% else %}
-                    <h3>{{trait.title}}:</h3>
-                    <p><h4>{{trait.text }}</h4></p>
+                    <h3 style= "border-bottom: 2px solid #0a3652; font-weight: bolder; text-indent: 5px;">{{trait.title}}:</h3>
+                    <p><h4>{{trait.text|linebreaksbr}}</h4></p>
                 {% endif %} 
             </div>
         {% endfor %}

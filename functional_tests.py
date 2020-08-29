@@ -186,8 +186,87 @@ try:
     )
     browser.find_element_by_link_text("CV").click()
 
-    # Can I edit the CV form?
+    # Can I edit the CV?
+    cv_edit_button_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, "Edit"))
+    )
+    browser.find_element_by_partial_link_text("Edit").click()
 
+    cv_edit_form_title_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.ID, "id_title"))
+    )
+    browser.find_element_by_id("id_title").send_keys(" Typeface")
+
+    cv_edit_save_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.TAG_NAME, "button"))
+    )
+    browser.find_element_by_tag_name("button").click()
+
+    cv_edit_button_present_2 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, "Edit"))
+    )
+    browser.find_element_by_partial_link_text("Edit").click()
+
+    cv_edit_form_title_present_2 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.ID, "id_title"))
+    )
+    for i in range(9):
+        browser.find_element_by_id("id_title").send_keys(Keys.BACKSPACE)
+
+    cv_edit_form_text_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.ID, "id_text"))
+    )
+    browser.find_element_by_id("id_text").send_keys(" Placeholder")
+
+    cv_edit_save_present_2 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.TAG_NAME, "button"))
+    )
+    browser.find_element_by_tag_name("button").click()
+
+
+    # Why am I doing this to myself?
+    cv_edit_button_present_3 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, "Edit"))
+    )
+    browser.find_element_by_partial_link_text("Edit").click()
+
+    cv_edit_form_text_present_2 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.ID, "id_text"))
+    )
+    for i in range(12):
+        browser.find_element_by_id("id_text").send_keys(Keys.BACKSPACE)
+
+    cv_edit_save_present_3 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.TAG_NAME, "button"))
+    )
+    browser.find_element_by_tag_name("button").click()
+
+    cv_title_page = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.NAME, "page-title"))
+    )
+
+    # Can I add new traits to the CV?
+    cv_new_trait_button_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, "New trait"))
+    )
+
+    browser.find_element_by_partial_link_text("New trait").click()
+
+    cv_new_title_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.ID, "id_title"))
+    )
+    browser.find_element_by_id("id_title").send_keys("Typeface")
+
+    cv_new_text_present = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.ID, "id_text"))
+    )
+    browser.find_element_by_id("id_text").send_keys("Placeholder")
+
+    cv_edit_save_present_4 = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.TAG_NAME, "button"))
+    )
+    browser.find_element_by_tag_name("button").click()
+    
     # If no AssertionError has been raised, show this
     print("All functional tests succesfully completed!", end="\n")
 except AssertionError:
